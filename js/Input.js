@@ -3,10 +3,10 @@ const KEY_UP_ARROW = 38;
 const KEY_RIGHT_ARROW = 39;
 const KEY_DOWN_ARROW = 40;
 
-var keyHeld_Gas = false;
-var keyHeld_Reverse = false;
-var keyHeld_TrunLeft = false;
-var keyHeld_TurnRight = false;
+const KEY_W = 87;
+const KEY_A = 65;
+const KEY_S = 83;
+const KEY_D = 68;
 
 var mouseX = 0;
 var mouseY = 0;
@@ -17,6 +17,8 @@ function setupInput(){
   document.addEventListener('keydown', keyPressed);
   document.addEventListener('keyup', keyReleased);
 
+  p1.setupInput(KEY_UP_ARROW, KEY_RIGHT_ARROW, KEY_DOWN_ARROW, KEY_LEFT_ARROW);
+  p2.setupInput(KEY_W, KEY_D, KEY_S, KEY_A);
 }
 
 function updateMousePos(evt) {
@@ -33,33 +35,28 @@ function updateMousePos(evt) {
   carSpeedY = -4;*/
 }
 
+function keySet(keyEvent, whichCar, setTo){
+  if(keyEvent.keyCode == whichCar.controlKeyLeft){
+    whichCar.keyHeld_TrunLeft = setTo;
+  }
+  if(keyEvent.keyCode == whichCar.controlKeyRight){
+    whichCar.keyHeld_TurnRight = setTo;
+  }
+  if(keyEvent.keyCode == whichCar.controlKeyUp){
+    whichCar.keyHeld_Gas = setTo;
+  }
+  if(keyEvent.keyCode == whichCar.controlKeyDown){
+    whichCar.keyHeld_Reverse = setTo;
+  }
+}
+
 function keyPressed(evt) {
-  if(evt.keyCode == KEY_LEFT_ARROW){
-    keyHeld_TrunLeft = true;
-  }
-  if(evt.keyCode == KEY_RIGHT_ARROW){
-    keyHeld_TurnRight = true;
-  }
-  if(evt.keyCode == KEY_UP_ARROW){
-    keyHeld_Gas = true;
-  }
-  if(evt.keyCode == KEY_DOWN_ARROW){
-    keyHeld_Reverse = true;
-  }
+  keySet(evt,p1, true)
+  keySet(evt,p2, true)
 }
 
 function keyReleased(evt) {
   //console.log("key released: "+evt.keyCode) // allow me to see the key value when pressed
-  if(evt.keyCode == KEY_LEFT_ARROW){
-    keyHeld_TrunLeft = false;
-  }
-  if(evt.keyCode == KEY_RIGHT_ARROW){
-    keyHeld_TurnRight = false;
-  }
-  if(evt.keyCode == KEY_UP_ARROW){
-    keyHeld_Gas = false;
-  }
-  if(evt.keyCode == KEY_DOWN_ARROW){
-    keyHeld_Reverse = false;
-  }
+  keySet(evt,p1, false)
+  keySet(evt,p2, false)
 }

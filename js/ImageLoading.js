@@ -1,11 +1,6 @@
 var carPic = document.createElement("img");
-var roadPic = document.createElement("img");
-var roadPic2 = document.createElement("img");
-var roadPic3 = document.createElement("img");
-var roadPic4 = document.createElement("img");
+var carPic2 = document.createElement("img");
 var trackPicks = [];
-
-
 
 var picsToLoad = 0; //set auto by load images 
 
@@ -17,21 +12,20 @@ function countLoadImagesAndLaunchIfReady(){
   }
 };
 
-function loadImageForTrackCode(trackCode, fileName) {
-  trackPicks[trackCode] = document.createElement("img")
-  beginLoadingImage(trackPicks[trackCode], fileName);
-}
-
 function beginLoadingImage(imgVar, fileName){
   imgVar.onload = countLoadImagesAndLaunchIfReady; 
   imgVar.src = "images/"+fileName;
 }
 
-function loadImages() {
-  var dataSet = {varName: carPic, theFile: "X-wing.png"}
+function loadImageForTrackCode(trackCode, fileName) {
+  trackPicks[trackCode] = document.createElement("img")
+  beginLoadingImage(trackPicks[trackCode], fileName);
+}
 
+function loadImages() {
   var imageList = [
     {varName: carPic, theFile: "X-wing.png"}, 
+    {varName: carPic2, theFile: "Y-wing.png"}, 
     {trackType: TRACK_WALL, theFile: "WallPic.png"}, 
     {trackType: TRACK_WALL2, theFile: "WallPic_Two.png"}, 
     {trackType: TRACK_WALL3, theFile: "WallPic_Three.png"}, 
@@ -40,6 +34,7 @@ function loadImages() {
     {trackType: TRACK_ROAD2, theFile: "RoadPic_Two.png"}, 
     {trackType: TRACK_ROAD3, theFile: "RoadPic_Three.png"}, 
     {trackType: TRACK_ROAD4, theFile: "RoadPic_Four.png"}, 
+    {trackType: TRACK_GOAL, theFile: "Track_Goal.png"},
   ];
 
   picsToLoad = imageList.length
