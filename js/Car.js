@@ -4,9 +4,10 @@ var carAng = 0;
 var carSpeed = 0;
 
 const GROUNDSPEED_DECAY_MULT = 0.99; 
-const DRIVE_POWER = 0.4; 
+const DRIVE_POWER = 0.3; 
 const REVERSE_POWER = 0.2;
 const TURN_RATE = 0.05;
+const MIN_SPEED_TO_TURN = 0.2; 
 
 function carReset() {
   for(var eachRow=0;eachRow<TRACK_ROWS;eachRow++) {
@@ -31,18 +32,18 @@ function carMove() {
   if(keyHeld_Reverse){
     carSpeed -= REVERSE_POWER;
   }
-  if(keyHeld_TrunLeft){
-    carAng -= TURN_RATE;
-  }
-  if(keyHeld_TurnRight){
-    carAng += TURN_RATE;
+  if(Math.abs(carSpeed) > MIN_SPEED_TO_TURN){
+    if(keyHeld_TrunLeft){
+      carAng -= TURN_RATE;
+    }
+    if(keyHeld_TurnRight){
+      carAng += TURN_RATE;
+    }
   }
   carX += Math.cos(carAng) * carSpeed; //Cos used for the X axis the car in angled direction
   carY += Math.sin(carAng) * carSpeed; //Sin used for the Y axis the car in angled direction 
 }
 
 function carDraw(){
-  if(carPicLoaded) {
     drawBitmapCenteredWithRotation(carPic, carX,carY, carAng);
-  }
 }
