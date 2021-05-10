@@ -6,7 +6,7 @@ Michael Walker
 ## Introduction: 
  This was a course from Udemy that covered the basics of tile game building. The application allows for two players to race each other in an old retro gaming fashion. upon winning the race the game will reset. The purpose of this application was to get practice with the HTML5 Canvas Element and vanilla javascript. 
 
-###Installation: 
+### Installation: 
 
 #### Fork this repository:
 
