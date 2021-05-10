@@ -12,8 +12,8 @@ var levelOne = [ 3, 4, 5, 1, 3, 1, 3, 4, 1, 5, 1, 3, 3, 4, 5, 4, 1, 3, 1, 5,
                   1, 0, 0, 4, 0, 0, 0, 0, 4, 3, 1, 0, 9, 0, 0, 0, 1, 8, 0, 5,
                   4, 7, 0, 1, 8, 0, 9, 0, 0, 5, 4, 0, 0, 3, 0, 0, 5, 0, 0, 1,
                   5, 0, 7, 5, 7, 0, 1, 0, 0, 0, 1, 8, 0, 5, 8, 0, 1, 7, 0, 4,
-                  1, 0, 0, 4, 0, 0, 4, 4, 8, 0, 4, 0, 0, 1, 0, 0, 4, 0, 0, 1,
-                  3, 2, 2, 5, 9, 0, 1, 3, 0, 7, 0, 9, 0, 4, 0, 0, 3, 0, 0, 3,
+                  1, 0, 0, 3, 0, 0, 4, 4, 8, 0, 4, 0, 0, 1, 0, 0, 4, 0, 0, 1,
+                  3, 2, 2, 4, 9, 0, 1, 3, 0, 7, 0, 9, 0, 4, 0, 0, 3, 0, 0, 3,
                   1, 1, 3, 4, 0, 0, 5, 4, 0, 0, 7, 8, 0, 1, 7, 0, 0, 9, 0, 5,
                   9, 6, 7, 0, 8, 0, 1, 5, 1, 0, 0, 0, 1, 4, 9, 0, 0, 0, 0, 3,
                   0, 6, 0, 7, 0, 0, 4, 3, 3, 5, 1, 4, 1, 1, 1, 0, 7, 0, 4, 5,
@@ -30,6 +30,7 @@ const TRACK_GOAL = 6;
 const TRACK_ROAD2 = 7;
 const TRACK_ROAD3 = 8;
 const TRACK_ROAD4 = 9;
+var winner; 
 
 function returnTileTypeAtColRow(col, row) {
   if(col >= 0 && col < TRACK_COLS &&
@@ -42,16 +43,18 @@ function returnTileTypeAtColRow(col, row) {
 }
 
 function carTrackHandling(whichCar) {
+
   var carTrackCol = Math.floor(whichCar.x / TRACK_W);
   var carTrackRow = Math.floor(whichCar.y / TRACK_H);
   var trackIndexUnderCar = rowColToArrayIndex(carTrackCol, carTrackRow);
-
+  
   if(carTrackCol >= 0 && carTrackCol < TRACK_COLS &&
     carTrackRow >= 0 && carTrackRow < TRACK_ROWS) {
     var tileHere = returnTileTypeAtColRow( carTrackCol,carTrackRow );
     
     if(tileHere == TRACK_GOAL) {
-			console.log(whichCar.name + " Wins!"); 
+			winner = whichCar.name + " Wins!";  
+      win=true;
       setTimeout(function(){ loadLevel(levelOne); }, 1000);
       //loadLevel(levelOne);
 		} else if(tileHere != TRACK_ROAD && tileHere != TRACK_ROAD2 && tileHere != TRACK_ROAD3 && tileHere != TRACK_ROAD4) {

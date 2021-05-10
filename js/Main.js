@@ -2,6 +2,7 @@ var canvas, canvasContext;
 
 var p1 = new carClass();
 var p2 = new carClass();
+var win = false;
 
 window.onload = function() {
   canvas = document.getElementById('gameCanvas');
@@ -25,11 +26,18 @@ function loadLevel(whichLevel){
   trackGrid = whichLevel.slice();
   p2.reset(carPic2, "Y-Wing"); 
   p1.reset(carPic, "X-Wing"); 
+  win = false; 
+  winner = "No Winner Yet"
 }
 
 function updateAll() {
-  moveAll();
-  drawAll();
+  if(win){
+    colorRect(0,0, canvas.clientWidth,canvas.clientHeight, 'black');
+    colorText(winner, canvas.width/2, canvas.height/2, "red");
+  }else{
+    moveAll();
+    drawAll();
+  }
 }
 
 function moveAll() {
