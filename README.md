@@ -4,7 +4,7 @@
 Michael Walker 
 
 ## Introduction: 
- This was a course from Udemy that covered the basics of tile game building. The application allows for two players to race each other in an old retro gaming fashion. upon winning the race the game will reset. The purpose of this application was to get practice with the HTML5 Canvas Element and vanilla javascript. 
+ This was a course from Udemy that covered the basics of tile game building. The application allows for two players to race each other in an old retro gaming fashion. Upon winning the race the game will reset. The purpose of this application was to get practice with the HTML5 Canvas Element and Vanilla Javascript. This game is a two player game with player one being in an X-Wing and player two in the Y-Wing.   
 
 ### Installation: 
 
