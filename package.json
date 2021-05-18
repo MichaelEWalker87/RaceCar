@@ -2,23 +2,17 @@
   "name": "racing_game",
   "version": "0.1.0",
   "private": true,
+  "main": "./public/index.js",
   "scripts": {
     "start": "node server.js",
-    "build": "node server.js build",
-    "lint": "node server.js lint"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "~4.5.0",
-    "@vue/cli-plugin-eslint": "~4.5.0",
-    "@vue/cli-plugin-router": "^4.5.11",
-    "@vue/cli-service": "^4.5.13",
-    "babel-eslint": "^10.1.0",
+    "express": "^4.17.1",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
     "node-sass": "^5.0.0",
-    "sass-loader": "^10.1.1",
-    "vue-svg-loader": "^0.16.0",
-    "vue-template-compiler": "^2.6.11"
+    "sass-loader": "^10.1.1"
   },
   "eslintConfig": {
     "root": true,
