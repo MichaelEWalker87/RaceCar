@@ -1,0 +1,39 @@
+@font-face {
+  font-family: "StarWars";
+  src: url("./fonts/StarWarsFont.ttf")format("truetype");
+}
+
+canvas{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 2;
+  border: 1rem solid;
+  border-image: linear-gradient(var(--angle),#0ccf0c, #0077ff,  #aa0aaa, #f60d05) 3;
+  animation: 10s rotate linear infinite;
+}
+
+@keyframes rotate {
+  to {
+    --angle: 360deg;
+  }
+}
+
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+body{
+  background-image: url("./images/StarWarsBackground.png");
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}

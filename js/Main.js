@@ -33,7 +33,7 @@ function loadLevel(whichLevel){
 function updateAll() {
   if(win){
     colorRect(0,0, canvas.clientWidth,canvas.clientHeight, 'black');
-    colorText(winner, canvas.width/2, canvas.height/2, "red");
+    colorText(winner, canvas.width/2, canvas.height/2, "#FFE81F");
   }else{
     moveAll();
     drawAll();
