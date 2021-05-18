@@ -3,11 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "start": "node server.js",
+    "build": "node server.js build",
+    "lint": "node server.js lint"
   },
-    "devDependencies": {
+  "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
     "@vue/cli-plugin-router": "^4.5.11",
@@ -33,5 +33,8 @@
       "parser": "babel-eslint"
     },
     "rules": {}
+  },
+  "dependencies": {
+    "express": "^4.17.1"
   }
 }
