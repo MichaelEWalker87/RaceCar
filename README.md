@@ -8,15 +8,18 @@ Michael Walker
 
 ### Installation: 
 
-#### Fork this repository:
+1) Fork this repository:
 
-#### Clone your forked repository
+2) Clone your forked repository
 git clone and the copied URL
-#### Change into the directory and install the project dependencies
-cd into the directory and run npm install for dependencies
-In the terminal project root directory run "open Index.html"
 
-### controls: 
+3) Change into the directory and install the project dependencies
+cd into the directory and run npm install for dependencies
+In the terminal project root directory run "npm start"
+
+4) Open application on loaclhost 
+
+### Controls: 
 
 The vehicle can not turn when fully stopped 
 If a player hits a wall it will reverse the vehicle 
