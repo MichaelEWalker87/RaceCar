@@ -2,15 +2,15 @@
   "name": "racing_game",
   "version": "0.1.0",
   "private": true,
-  "main": "./public/index.js",
+  "main": "index.js",
   "scripts": {
     "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "express": "^4.17.1",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
+    "express": "^4.17.1",
     "node-sass": "^5.0.0",
     "sass-loader": "^10.1.1"
   },
@@ -20,7 +20,6 @@
       "node": true
     },
     "extends": [
-      "plugin:vue/essential",
       "eslint:recommended"
     ],
     "parserOptions": {
@@ -28,7 +27,16 @@
     },
     "rules": {}
   },
-  "dependencies": {
-    "express": "^4.17.1"
-  }
+  "dependencies": {},
+  "description": "## Author  Michael Walker",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MichaelEWalker87/RaceCar.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MichaelEWalker87/RaceCar/issues"
+  },
+  "homepage": "https://github.com/MichaelEWalker87/RaceCar#readme"
 }
