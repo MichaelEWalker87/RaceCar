@@ -43,13 +43,12 @@ In the terminal project root directory run "npm start"
 
 ### Photos of Game Play:
 
-<img width="700" alt="X-Wing Wins!" src="https://user-images.githubusercontent.com/54221369/118865087-d81baa00-b89d-11eb-8f46-6d8a774a74a4.png">
-
-
-
 <img width="700" alt="In Game Racing" src="https://user-images.githubusercontent.com/54221369/118865028-c76b3400-b89d-11eb-9567-962451a27496.png">
 
 
 <img width="700" alt="In Game Racing" src="https://user-images.githubusercontent.com/54221369/118865048-ce924200-b89d-11eb-93c2-b536a6d94194.png">
+
+
+<img width="700" alt="X-Wing Wins!" src="https://user-images.githubusercontent.com/54221369/118865087-d81baa00-b89d-11eb-8f46-6d8a774a74a4.png">
 
 
