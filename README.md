@@ -7,7 +7,7 @@ Michael Walker
 
 This was a course from Udemy that covered the basics of tile game building. The application allows for two players to race each other in an old retro gaming fashion. Upon winning the race the game will reset. The purpose of this application was to get practice with the HTML5 Canvas Element and Vanilla Javascript. This game is a two player game with player one being in an X-Wing and player two in the Y-Wing.   
  
-## Play the game Here 
+## Play The Game Here 
 
 [link to game](https://star-wars-racing.herokuapp.com/)
 
@@ -25,6 +25,8 @@ up arrow=move forward X-Wing
 right arrow = move right X-Wing
 down arrow= move backward X-Wing
 left arrow= move left X-Wing 
+
+Note Player one/X-Wing controlls can overlap with audio controlls
 
 ### Installation: 
 
